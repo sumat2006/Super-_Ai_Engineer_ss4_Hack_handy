@@ -54,9 +54,9 @@ bool fan_stat = false;
 
 const char* Netpiemqtt_server = "broker.netpie.io";
 const int Netpiemqtt_port = 1883;
-const char* Netpiemqtt_username = "gz1Fid9NVR24mms1hCvxyU1bQscshUFf";
-const char* Netpiemqtt_password = "LeYSNmSg3ymG2oce3xxURMa73qLJdJPj";
-const char* Netpiemqtt_Client = "f1097073-5f93-4c2b-bd85-08813f88025d";
+const char* Netpiemqtt_username = "";
+const char* Netpiemqtt_password = "";
+const char* Netpiemqtt_Client = "";
 
 
 float VDP(float tem ,float hum) //ค่าที่ต้นไม้ชอบ ถ้าดีจะอยู่ใน 0.9-1
@@ -88,7 +88,7 @@ void setup() {
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
   }
-  LINE.setToken(String("G2Nk31ykeX3RjfQefO3MWVxqi9UskoYr7sUCTvT5IC9"));
+  LINE.setToken(String(""));
   Netpieclient.setServer(Netpiemqtt_server, Netpiemqtt_port);
 }
 
