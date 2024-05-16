@@ -255,9 +255,7 @@ void loop()
             Serial.println("task1");
             if(!Wtop_stat){
                 Wtop_timemer_set = currentMillis;
-                // Wdown_timemer_set = currentMillis;
                 Wtop_stat = true;
-                // Wdown_stat = true;
             }
 
             if(Wtop_stat && currentMillis - Wtop_timemer_set < 2000){
@@ -274,19 +272,6 @@ void loop()
                 Wtop_stat = false;
                 digitalWrite(const_relay_pin[0], LOW);
             }
-            // if(Wdown_stat && currentMillis - Wtop_timemer_set > 2000 && currentMillis - Wdown_timemer_set < 4000){
-            //     digitalWrite(const_relay_pin[3], HIGH);
-            //     valve_2 += 1;
-            //      if(!v2){
-            //          valve_2 += 1;
-            //          v2 = true;
-            //      }
-            // }
-            // else if(!Wtop_stat){
-            //     v2 = false;
-            //     Wdown_stat = false;
-            //     digitalWrite(const_relay_pin[3], LOW);
-            // }
         }
         
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -295,9 +280,7 @@ void loop()
             Serial.println("task2");
             if(!Wtop_stat){
                 Wtop_timemer_set = currentMillis;
-                // Wdown_timemer_set = currentMillis;
                 Wtop_stat = true;
-                // Wdown_stat = true;
             }
 
             if(Wtop_stat && currentMillis - Wtop_timemer_set < 2000){
@@ -313,18 +296,6 @@ void loop()
                 Wtop_stat = false;
                 digitalWrite(const_relay_pin[0], LOW);
             }
-            // if(Wdown_stat && currentMillis - Wtop_timemer_set > 2000 && currentMillis - Wdown_timemer_set < 4000){
-            //     digitalWrite(const_relay_pin[3], HIGH);
-            //     if(!v2){
-            //         valve_2 += 1;
-            //         v2 = true;
-            //     }
-            // }
-            // else if(!Wtop_stat){
-            //     v2 = false;
-            //     Wdown_stat = false;
-            //     digitalWrite(const_relay_pin[3], LOW);
-            // }
         }
 ///////////////////////////////////////////////////////////////////////////////////////////        
         if (temp > tempset && humid > humidset && soim > moistureset)
@@ -384,9 +355,7 @@ void loop()
             }
               
             if(!Wdown_stat){
-                // Wtop_timemer_set = currentMillis;
                 Wdown_timemer_set = currentMillis;
-                // Wtop_stat = true;
                 Wdown_stat = true;
             }
             
@@ -403,26 +372,7 @@ void loop()
                 Wdown_stat = false;
                 digitalWrite(const_relay_pin[3], LOW);
             }
-            // if(Wtop_stat && currentMillis - Wdown_timemer_set > 2000 && currentMillis - Wtop_timemer_set < 4000){
-            //     digitalWrite(const_relay_pin[0], HIGH);
-            //     if(!v1){
-            //         valve_1 += 1;
-            //         v1 = true;
-            //     }
-            // }
-            // else if(!Wdown_stat){
-            //     v1 = false;
-            //     Wtop_stat = false;
-            //     digitalWrite(const_relay_pin[0], LOW);
-            // }
         }
-
-        // if(!(soil_mois_1 <= stop) && !(soil_mois_2 <= stop)){
-        //     Wtop_stat = false;
-        //     Wdown_stat = false;
-        //     digitalWrite(const_relay_pin[0], LOW);
-        //     digitalWrite(const_relay_pin[3], LOW);
-        // }
     }
     else if((soim < moistureset) && !(soil_mois_1 <= stop) && !(soil_mois_2 <= stop) ){
         if(!fan_stat){
@@ -439,9 +389,7 @@ void loop()
             }
               
             if(!Wdown_stat){
-                // Wtop_timemer_set = currentMillis;
                 Wdown_timemer_set = currentMillis;
-                // Wtop_stat = true;
                 Wdown_stat = true;
             }
             
